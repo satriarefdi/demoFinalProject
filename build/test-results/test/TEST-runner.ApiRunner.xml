@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runner.ApiRunner" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-07-17T14:55:45" hostname="LAPTOP-A240SRC4" time="0.107">
+  <properties/>
+  <testcase name="Test get list data normal" classname="runner.ApiRunner" time="0.099"/>
+  <testcase name="Test get list data normal 3" classname="runner.ApiRunner" time="0.006"/>
+  <system-out><![CDATA[Before All
+
+@api
+Scenario: Test get list data normal         ?[90m# src/test/java/features/api.feature:4?[0m
+Before Test
+Hello Prepare URL
+  ?[32mGiven ?[0m?[32mprepare url valid for get list data?[0m ?[90m# stepDef.ApiStep.prepareUrlValidForGetListData()?[0m
+After Test
+
+@api
+Scenario: Test get list data normal 3       ?[90m# src/test/java/features/api.feature:12?[0m
+Before Test
+Hello Prepare URL
+  ?[32mGiven ?[0m?[32mprepare url valid for get list data?[0m ?[90m# stepDef.ApiStep.prepareUrlValidForGetListData()?[0m
+After Test
+After All
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
