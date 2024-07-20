@@ -10,9 +10,9 @@ public class Models {
 
     public static void setupHeaders(){
         request = RestAssured.given()
-                .header("Content-Type", "application/json");
-                .header( "Accept", "application/json");
-                .header( "Authorization", "Bearer 870f011b6449d643f00104825c70d73af8a3dc514393008419f97fcfccf2a71f");
+                .header( headerName: "Content-Type", headerValue: "application/json");
+                .header( headerName: "Accept", headerValue: "application/json");
+                .header(headerName: "Authorization", headerValue: "Bearer 870f011b6449d643f00104825c70d73af8a3dc514393008419f97fcfccf2a71f");
     }
 
 
