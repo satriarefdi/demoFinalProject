@@ -13,39 +13,52 @@ public class ApiStep {
         this.apiPage = new ApiPage();
     }
 
-
     @Given("prepare url for {string}")
     public void prepareUrlFor(String url) {
-        apiPage.prepareURLFor(url);
+        apiPage.setupURL(url);
     }
 
     @And("hit api get list users")
-    public void hitApiGetListUsers() {
-        apiPage.hitApiGetListUsers();
-
+    public void hitApi() {
+        apiPage.hitGetListUser();
     }
 
     @Then("validation status code is equals {int}")
     public void validationStatusCodeIsEquals(int status_code) {
-
-        apiPage.validationStatusCodeIsEquals(status_code);
+        apiPage.validationStatusCode(status_code);
     }
-
 
     @Then("validation response body get list users")
     public void validationResponseBodyGetListUsers() {
-        apiPage.validationResponseBodyGetListUsers();
-        
+        apiPage.validationBodyGetListUsers();
     }
 
     @Then("validation response json with JSONSchema {string}")
     public void validationResponseJsonWithJSONSchema(String filename) {
-
-        apiPage.validationResponseJsonWithJSONSchema(filename);
+        apiPage.validationJSONSChema(filename);
     }
 
-    @And("hit api post create new user")
-    public void hitApiPostCreateNewUser() {
-        apiPage.hitApiPostCreateUser();
+    @And("hit api post create new users")
+    public void hitApiPostCreateNewUsers() {
+        apiPage.hitPostCreateUser();
+    }
+
+    @Then("validation response body post create new user")
+    public void validationResponseBodyPostCreateNewUser() {
+        apiPage.validationBodyPostCreateNewUsers();
+    }
+
+    @And("hit api delete new")
+    public void hitApiDeleteNew() {
+        apiPage.hitDeleteUsers();
+    }
+    @And("hit api update data")
+    public void hitApiUpdateData() {
+        apiPage.hitUpdateUser();
+    }
+
+    @Then("validation response body update user")
+    public void validationResponseBodyUpdateUser() {
+        apiPage.validationBodyUpdateUsers();
     }
 }
