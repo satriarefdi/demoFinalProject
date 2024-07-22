@@ -1,9 +1,16 @@
 package pages;
 
 import helper.Endpoint;
+import helper.Utility;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
+import java.io.File;
+import java.util.List;
+
 import static helper.Models.getListUsers;
+import static helper.Models.postCreateUser;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class ApiPage {
 
@@ -12,36 +19,31 @@ public class ApiPage {
     Response res;
 
     public void prepareURLFor(String url){
-        switch (url) {
-            case "GET_LIST_USERS":
-                setURL = Endpoint.GET_LIST_USERS;
-                break;
-            case "CREATE_NEW_USERS":
-                setURL = Endpoint.CREATE_NEW_USERS;
-                break;
-            case "DELETE_USERS":
-                setURL = Endpoint.DELETE_USERS;
-                break;
-            default:
-                System.out.println("input right url");
-        }
-        System.out.println("Endpoint siap pakai adalah : " + setURL);
+
     }
 
     public void hitApiGetListUsers() {
-      res = getListUsers(setURL);
+
+        res = getListUsers(setURL);
+    }
+
+    public void hitApiPostCreateUser() {
+
+        res = postCreateUser(setURL);
         System.out.println(res.getBody().asString());
     }
 
-    public void validationStatusCodeIsEquals(){
-        System.out.println("step form page : 3 " );
+    public void validationStatusCodeIsEquals(int status_code){
+
+        assertThat(res.statusCode()).isEqualTo(status_code);
     }
 
     public void validationResponseBodyGetListUsers(){
-        System.out.println("step form page : 4 " );
+
     }
-    public void validationResponseJsonWithJSONSchema(){
-        System.out.println("step form page : 5 " );
+
+    public void validationResponseJsonWithJSONSchema(String filename){
+
     }
 
 
