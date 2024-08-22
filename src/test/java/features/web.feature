@@ -20,7 +20,7 @@ Feature: Test Automation Web
   Scenario: Test web login wrong password
     Given user go to login page
     And user input username "locked_out_user"
-    And user input pwd "DFAW"
+    And user input pwd "SALAHPASSWORD"
     And user click login button
     Then user verify see errmsg "Username and password do not match any user"
 
