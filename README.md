@@ -1,5 +1,6 @@
 
 **Final Project : membuat Web UI Automation dan API Automation dengan requirement**  
+
 1. Git & GitHub untuk repository
 2. Bahasa pemograman menggunakan Java 
 3. Manajemen dependensi menggunakan Gradle 
@@ -13,7 +14,7 @@ Pada Project ini kita mempunyai cucumber api.feature dengan style Page Object Mo
 
 
 
-**Berikut contoh hasil Api Testing dan Web Testing : **
+Berikut contoh hasil Api Testing dan Web Testing :
 
 ![alt text](https://github.com/satriarefdi/demoFinalProject/blob/main/API%20Feature%20Final%20Project.png?raw=true)
 
